@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2144b959-47e5-436c-b04f-4b24a7a80d36" name="Default Changelist" comment="" />
+    <list default="true" id="2144b959-47e5-436c-b04f-4b24a7a80d36" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/1. Introduction/problemset2.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/1. Introduction/problemset2.clj" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,15 +19,20 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1PiDodkahlNeWjPh2QITOZ590Bx" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="cursive.last.file.extension./Users/carlos-cecnn12/untitled/src" value="clj" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
-  <component name="ReplState" timestamp="1568666743965">{:repl-history {:ide [], :local [{:command &quot;(+ 1 2 3)&quot;, :offset 9, :ns &quot;user&quot;} {:command &quot;(f2c 100)&quot;, :offset 9, :ns &quot;user&quot;} {:command &quot;(roots [2 4 2])&quot;, :offset 15, :ns &quot;user&quot;} {:command &quot;(roots 2 4 2)&quot;, :offset 13, :ns &quot;user&quot;} {:command &quot;  (roots 1 0 0)&quot;, :offset 15, :ns &quot;user&quot;} {:command &quot;  (roots 4 5 1)&quot;, :offset 15, :ns &quot;user&quot;} {:command &quot;(bmi 80 2)&quot;, :offset 10, :ns &quot;user&quot;} {:command &quot;(bmi 100 1.85)&quot;, :offset 14, :ns &quot;user&quot;} {:command &quot;(bmi 110 1.85)&quot;, :offset 14, :ns &quot;user&quot;} {:command &quot;(boolean -1)&quot;, :offset 12, :ns &quot;user&quot;} {:command &quot;(! 3)&quot;, :offset 5, :ns &quot;user&quot;} {:command &quot;(! 0)&quot;, :offset 5, :ns &quot;user&quot;} {:command &quot;(! 10)&quot;, :offset 6, :ns &quot;user&quot;} {:command &quot;(! 100)\n   &quot;, :offset 10, :ns &quot;user&quot;} {:command &quot;(! 100N)\n   &quot;, :offset 8, :ns &quot;user&quot;} {:command &quot;(zero? 0.3)&quot;, :offset 11, :ns &quot;user&quot;} {:command &quot;(doc reduce)&quot;, :offset 12, :ns &quot;user&quot;} {:command &quot;(duplicate (1 2 3))&quot;, :offset 19, :ns &quot;user&quot;} {:command &quot;(duplicat e '(1 2 3))&quot;, :offset 21} {:command &quot;(duplicate '(1 2 3))&quot;, :offset 20, :ns &quot;user&quot;} {:command &quot;(pow 2 1)\n     &quot;, :offset 14, :ns &quot;user&quot;} {:command &quot;(pow 2 2)&quot;, :offset 9, :ns &quot;user&quot;} {:command &quot;(pow 2 0)&quot;, :offset 9, :ns &quot;user&quot;} {:command &quot;(pow 4\n     0)&quot;, :offset 14, :ns &quot;user&quot;} {:command &quot;(swapper 'kitty 'purr '(Soft kitty\n                             Warm kitty\n                             Little ball of fur\n\n                             Happy kitty\n                             Sleepy kitty\n                             Purr purr purr))&quot;, :offset 252, :ns &quot;user&quot;} {:command &quot;(swapper 'kitty 'purr '(soft kitty warm kitty purr purr purr))&quot;, :offset 62, :ns &quot;user&quot;}], :remote []}}</component>
+  <component name="ReplState" timestamp="1568915821843">{:repl-history {:ide [], :local [{:command &quot;(+ 1 2 3)&quot;, :offset 9, :ns &quot;user&quot;} {:command &quot;(f2c 100)&quot;, :offset 9, :ns &quot;user&quot;} {:command &quot;(roots [2 4 2])&quot;, :offset 15, :ns &quot;user&quot;} {:command &quot;(roots 2 4 2)&quot;, :offset 13, :ns &quot;user&quot;} {:command &quot;  (roots 1 0 0)&quot;, :offset 15, :ns &quot;user&quot;} {:command &quot;  (roots 4 5 1)&quot;, :offset 15, :ns &quot;user&quot;} {:command &quot;(bmi 80 2)&quot;, :offset 10, :ns &quot;user&quot;} {:command &quot;(bmi 100 1.85)&quot;, :offset 14, :ns &quot;user&quot;} {:command &quot;(bmi 110 1.85)&quot;, :offset 14, :ns &quot;user&quot;} {:command &quot;(boolean -1)&quot;, :offset 12, :ns &quot;user&quot;} {:command &quot;(! 3)&quot;, :offset 5, :ns &quot;user&quot;} {:command &quot;(! 0)&quot;, :offset 5, :ns &quot;user&quot;} {:command &quot;(! 10)&quot;, :offset 6, :ns &quot;user&quot;} {:command &quot;(! 100)\n   &quot;, :offset 10, :ns &quot;user&quot;} {:command &quot;(! 100N)\n   &quot;, :offset 8, :ns &quot;user&quot;} {:command &quot;(zero? 0.3)&quot;, :offset 11, :ns &quot;user&quot;} {:command &quot;(doc reduce)&quot;, :offset 12, :ns &quot;user&quot;} {:command &quot;(duplicate (1 2 3))&quot;, :offset 19, :ns &quot;user&quot;} {:command &quot;(duplicat e '(1 2 3))&quot;, :offset 21} {:command &quot;(duplicate '(1 2 3))&quot;, :offset 20, :ns &quot;user&quot;} {:command &quot;(pow 2 1)\n     &quot;, :offset 14, :ns &quot;user&quot;} {:command &quot;(pow 2 2)&quot;, :offset 9, :ns &quot;user&quot;} {:command &quot;(pow 2 0)&quot;, :offset 9, :ns &quot;user&quot;} {:command &quot;(pow 4\n     0)&quot;, :offset 14, :ns &quot;user&quot;} {:command &quot;(swapper 'kitty 'purr '(Soft kitty\n                             Warm kitty\n                             Little ball of fur\n\n                             Happy kitty\n                             Sleepy kitty\n                             Purr purr purr))&quot;, :offset 252, :ns &quot;user&quot;} {:command &quot;(swapper 'kitty 'purr '(soft kitty warm kitty purr purr purr))&quot;, :offset 62, :ns &quot;user&quot;}], :remote []}}</component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -79,5 +88,16 @@
       <updated>1566348199714</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
