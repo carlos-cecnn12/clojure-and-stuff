@@ -4,23 +4,31 @@
 (require '[clojure.math.numeric-tower :refer [abs]])
 
 (defn replic
+  "Returns a new list that replicates n times each element contained in lst."
   [n lst]
   (if (empty? lst)
     ()
     (concat (repeat n (first lst)) (replic n (rest lst)))))
 
 (defn expand
+  "Returns a lst where the first element of lst appears one time,
+  the second appears two times, and so on..."
   [lst]
   (let [tmp (range 1 (+ 1 (count lst)))]
     (mapcat repeat tmp lst)))
 
 (defn insert
+  "Returns a new list with the same elements as lst but
+  inserting n in its corresponding place."
   [n lst]
   (let [[less more] (split-with #(< % n) lst)]
     (concat less [n] more)))
 
 
 (defn my-sort
+  "Returns a new list with the same elements of lst
+  but in ascending order using the insert function
+  defined in the previous exercise. "
   [lst]
   (loop [lst lst
          tmp ()]
@@ -30,6 +38,8 @@
            (insert (first lst) tmp))))
 
 (defn rotate-left
+  "Returns the list that results from rotating lst a total of n elements
+  to the left. If n is negative, it rotates to the right."
   [n lst]
   (if (zero? n)
     lst
@@ -48,29 +58,78 @@
                   (first (split-at n lst))))))))
 
 (defn binary
+  "Returns a list with a sequence of ones and zeros
+  equivalent to the binary representation of n."
   [n]
   (if (zero? n)
     ()
     (concat (binary (quot n 2)) (list (rem n 2)))))
 
+(defn prime-factors
+  "Returns a list containing the prime factors of n
+  in ascending order. If you multiply all the prime
+  factors you get the original number. (assume that n > 0)"
+  [n]
+  nil)
+
 (defn gcd
+  "Returns the greatest common divisor (GCD) of a and b."
   [a b]
   (if (zero? b)
     a
     (gcd b (mod a b))))
 
+(defn insert-everywhere
+  "Returns a new list with all the possible ways in which x
+  can be inserted into every position of lst. "
+  [x lst]
+  nil
+  )
+
+(defn deep-reverse
+  "Returns a list with the same elements as its input
+  but in reverse order. If there are any nested lists,
+  these too should be reversed."
+  [lst]
+  (reverse (map #(if (coll? %) (deep-reverse %) %) lst))
+  )
 
 (defn pack
+  "Returns a list that contains consecutive repeated
+  elements placed in separate sublists"
   [lst]
  (partition-by identity lst))
 
 (defn compress
+  "Given lst that may contain consecutive repeated elements,
+   it returns another list with a single copy of the element without ordering it."
   [lst]
   (map first (pack lst)))
 
 (defn encode
+  "Returns a list with the consecutive duplicates of elements in lst
+  encoded as vectors [n e], where n is the number of duplicates of the
+  element e."
   [lst]
-  )
+  (mapcat #(list [(count %) (first %)]) (pack lst)))
+
+(defn encode-modified
+  "Works the same as the previous problem, but if an element has no
+   duplicates it is simply copied into the result list. Only elements
+   with duplicates are converted to [n e] vectors."
+  [lst]
+  (map #(if (= 1 (first %)) (second %) %)
+       (encode lst)))
+
+(defn decode
+  "Returns the decoded version of lst (encoded the same way as
+   the previous exercise."
+  [lst]
+  (mapcat #(if (vector? %)
+             (repeat (first %) (second %))
+             (list %))
+          lst))
+
 
 (deftest test-insert
   (is (= '(14) (insert 14 ())))
