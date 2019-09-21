@@ -1,4 +1,11 @@
-; Problem set 2
+;----------------------------------------------------------
+; Problem Set #2
+; Date: September 20, 2019.
+; Authors:
+;          A01373264 Carlos Emilio Carbajal Nogues
+;          A01373471 Marina Itzel Haro Hernandez
+;----------------------------------------------------------
+
 
 (require '[clojure.test :refer [deftest is run-tests]])
 (require '[clojure.math.numeric-tower :refer [abs]])
@@ -32,10 +39,10 @@
   [lst]
   (loop [lst lst
          tmp ()]
-    (empty? lst)
+    (if (empty? lst)
     tmp
     (recur (rest lst)
-           (insert (first lst) tmp))))
+           (insert (first lst) tmp)))))
 
 (defn rotate-left
   "Returns the list that results from rotating lst a total of n elements
@@ -84,20 +91,20 @@
     a
     (gcd b (mod a b))))
 
-(defn insert-x-in-n
+(defn insert-n-in-p
   "Function that helps solving de insert-everywhere function,
-  returns a list inserting the value x in the n position."
-  [n, lst, x]
-  (concat  (take n lst) (list x) (drop n lst))
+  returns a list inserting the value n in the p position."
+  [n, lst, p]
+  (concat (take p lst) (list n) (drop p lst))
   )
 
 (defn insert-everywhere
   "Returns a new list with all the possible ways in which x
   can be inserted into every position of lst. "
   [x lst]
-  (if (= 0 (count lst))
-    (list (insert-x-in-n 0 lst x))
-    (map insert-x-in-n (range) (repeat (+ (count lst) 1) lst)  (repeat x)))
+  (if (zero? (count lst))
+    (list (insert-n-in-p x lst 0))
+    (map insert-n-in-p  (repeat x) (repeat (+ (count lst) 1) lst)  (range)))
   )
 
 (defn deep-reverse
