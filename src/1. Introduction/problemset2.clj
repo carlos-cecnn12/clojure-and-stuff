@@ -70,7 +70,12 @@
   in ascending order. If you multiply all the prime
   factors you get the original number. (assume that n > 0)"
   [n]
-  nil)
+  (loop [n n
+         div 2
+         fact []]
+    (if (< n 2) fact
+                (if (= 0 (mod n div)) (recur (/ n div) div (conj fact div))
+                                      (recur n (inc div) fact)))))
 
 (defn gcd
   "Returns the greatest common divisor (GCD) of a and b."
@@ -79,11 +84,20 @@
     a
     (gcd b (mod a b))))
 
+(defn insert-x-in-n
+  "Function that helps solving de insert-everywhere function,
+  returns a list inserting the value x in the n position."
+  [n, lst, x]
+  (concat  (take n lst) (list x) (drop n lst))
+  )
+
 (defn insert-everywhere
   "Returns a new list with all the possible ways in which x
   can be inserted into every position of lst. "
   [x lst]
-  nil
+  (if (= 0 (count lst))
+    (list (insert-x-in-n 0 lst x))
+    (map insert-x-in-n (range) (repeat (+ (count lst) 1) lst)  (repeat x)))
   )
 
 (defn deep-reverse
