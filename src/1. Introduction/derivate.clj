@@ -1,5 +1,3 @@
-
-
 (declare variable?
          same-variable?
          sum?
